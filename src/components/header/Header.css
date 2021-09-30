@@ -1,0 +1,13 @@
+.button-group {
+  display: block;
+}
+
+button {
+  margin: 1%;
+  background-color: #282c34;;
+  color: white;
+  font-size: 20px;
+  padding: 5px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
