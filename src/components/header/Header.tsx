@@ -5,7 +5,12 @@ import {Link} from "react-router-dom";
 // Local
 import './Header.css';
 
-class Header extends Component {
+interface ILoginProps {
+    getToken?: any;
+    token?: string;
+}
+
+class Header extends Component<ILoginProps> {
     render() {
         return (
             <div className="button-group">
@@ -22,7 +27,7 @@ class Header extends Component {
                     <button>Documentation</button>
                 </Link>
                 <Link to="/login">
-                    <button>Login</button>
+                    <button onClick={() => this.props.getToken()}>Login</button>
                 </Link>
             </div>
         )

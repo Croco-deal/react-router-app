@@ -1,9 +1,9 @@
 // Local
-import Swagger from "../components/swagger/Swagger";
-import Login from "../components/login/Login";
 import Home from "../components/home/Home";
 import Download from "../components/download/Download";
 import Token from "../components/token/Token";
+import SwaggerContainer from "../containers/SwaggerContainer";
+import Login from "../components/login/Login";
 
 export const ROUTES = [
     {
@@ -12,7 +12,7 @@ export const ROUTES = [
     },
     {
         path: "/swagger",
-        component: Swagger
+        component: SwaggerContainer
     },
     {
         path: "/token",

@@ -5,10 +5,18 @@ import React, {Component} from "react";
 import SwaggerUI from "swagger-ui-react";
 import "swagger-ui-react/swagger-ui.css";
 
-class Swagger extends Component {
+interface ISwaggerProps {
+    token?: string;
+}
+
+class Swagger extends Component<ISwaggerProps> {
     render() {
+        const {token} = this.props;
         return(
-            <SwaggerUI url="https://petstore.swagger.io/v2/swagger.json"/>
+            <div>
+                <p>Token récupéré depuis le store: {token}</p>
+                <SwaggerUI url="https://petstore.swagger.io/v2/swagger.json"/>
+            </div>
         );
     }
 }
